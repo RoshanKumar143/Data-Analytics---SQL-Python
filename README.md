@@ -14,19 +14,19 @@
    -> data = data.drop_duplicates()    # Drop duplicates
    
 7. Cleaning Column
-   -> data['Age'] = data['Age'].astype(int)   # **Convert column to integer (if no missing values)**
-   -> data.rename(columns={'Name': 'FullName', 'Age': 'AgeYears'}, inplace=True)  # **rename**
-   -> data['col_name'] = data['col_name'].str.strip("<menton any symbols ar any to remove from the columns values>")  #../
-   -> data['Name'] = data['Name'].fillna('Unknown') # **Fill missing values** with a placeholder
-   -> data['Age'] = data['Age'].fillna(data['Age'].mean())  # **Fill missing numeric values** with the mean
-   -> data['Phone_Number'].str.replace('[^a-z,A-A,0-9]','')
-   -> data['Phone_Number'] = data['Phone_Number'].apply(lambda x: str(x)) # loop or lambda
-   -> data['Phone_Number'] = data['Phone_Number'].apply(lambda x: x[0:3] + '-' + x[3:6]+ '-' + x[6:10])
-   -> data['Phone_Number'] = data['Phone_Number'].str.replace('nan--','')
-   -> data[["Street_Address", "State", "Zip_COde"]] = data['Address'].str.split(',',2, expand=True)  => "980 Paper Avenue, Pennsylvania, 18503"
-   -> data = data.replace('N/a', '')
-   -> data = data.fillna('')   #remove NaN by empty
-   -> Function:
+   -> data['Age'] = data['Age'].astype(int)   # **Convert column to integer (if no missing values)** <br/>
+   -> data.rename(columns={'Name': 'FullName', 'Age': 'AgeYears'}, inplace=True)  # **rename** <br/>
+   -> data['col_name'] = data['col_name'].str.strip("<menton any symbols ar any to remove from the columns values>")  <br/>
+   -> data['Name'] = data['Name'].fillna('Unknown') # **Fill missing values** with a placeholder <br/>
+   -> data['Age'] = data['Age'].fillna(data['Age'].mean())  # **Fill missing numeric values** with the mean  <br/>
+   -> data['Phone_Number'].str.replace('[^a-z,A-A,0-9]','')  <br/>
+   -> data['Phone_Number'] = data['Phone_Number'].apply(lambda x: str(x)) # loop or lambda  <br/>
+   -> data['Phone_Number'] = data['Phone_Number'].apply(lambda x: x[0:3] + '-' + x[3:6]+ '-' + x[6:10])   <br/>
+   -> data['Phone_Number'] = data['Phone_Number'].str.replace('nan--','')  <br/>
+   -> data[["Street_Address", "State", "Zip_COde"]] = data['Address'].str.split(',',2, expand=True)  => "980 Paper Avenue, Pennsylvania, 18503"  <br/>
+   -> data = data.replace('N/a', '')  <br/>
+   -> data = data.fillna('')   #remove NaN by empty  <br/>
+   -> Function: 
               for x in data.index:
                 if data.loc[x, "Do_Not_Contact"] == 'Y': 
                   data.drop(x, inplace=True)
