@@ -1,0 +1,9 @@
+Github - https://github.com/Ayushi0214/SQL-Python-Ecommerce-Project/blob/main/python%2Bsql_ecommerce.ipynb
+
+> Dataset - https://www.kaggle.com/datasets/devarajv88/target-dataset?select=products.csv
+
+> Install Python, jupyter notebook(cmd>pip install jupyter, jupyter --version)
+
+> GO to Anaconda, Select "Windows" and download the appropriate .exe installer file. 
+ 
+. Go to Project folder > in bar type cmd, jupyter notebook
